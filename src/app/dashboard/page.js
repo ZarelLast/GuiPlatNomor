@@ -86,7 +86,7 @@ const Dashboard = () => {
             <Card sx={{ width: '90%', marginTop: '4vh' }}>
               <Grid container spacing={1} margin={1}>
                 {parameterYolo.map((item, key) => (
-                  <Grid item xs={12} md={4}>
+                  <Grid item key={key} xs={12} md={4}>
                     {item.name == 'optimizer' ?
                       <TextField
                         id={item.name + '' + item.id}
@@ -117,7 +117,7 @@ const Dashboard = () => {
             <Card sx={{ width: '90%', margin: '1vh' }}>
               <Grid container spacing={2}>
                 {buttonList.map((item, key) => (
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={12} key={key} md={4}>
                     {/* <LoadingButton loading loadingPosition="start">
                     {item.name}
                     </LoadingButton> */}
